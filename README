@@ -1,10 +1,5 @@
-Florea Stefan - Razvan
-331CB
-Tema 3 Algoritmi Paraleli si Distribuiti
-
-Tema implementeaza un program pentru paradigma Map-Reduce folosita de motoarele
-de cautare in momentul in care sunt nevoite sa faca procesari pe multe fisiere
-mari. Programul este paralelizat, primind in linia de comanda numarul de
+Proiectul implementeaza un program pentru paradigma Map-Reduce folosita de motoarele de cautare in momentul in care sunt nevoite sa faca procesari pe multe fisiere mari. 
+Programul este paralelizat, primind in linia de comanda numarul de
 threaduri ce vor urma sa proceseze pe fisierele citite.
 Programul primeste in linia de comanda pe lanaga numarul de threaduri, numele
 fisierului din va urma sa citeasca datele de care are nevoie si fisierul
