@@ -1,4 +1,6 @@
-Proiectul implementeaza un program pentru paradigma Map-Reduce folosita de motoarele de cautare in momentul in care sunt nevoite sa faca procesari pe multe fisiere mari. 
+Proiectul implementeaza un program pentru paradigma Map-Reduce folosita de 
+motoarele de cautare in momentul in care sunt nevoite sa faca procesari pe multe
+fisiere mari pentru indexarea documentelor existente pe internet. 
 Programul este paralelizat, primind in linia de comanda numarul de
 threaduri ce vor urma sa proceseze pe fisierele citite.
 Programul primeste in linia de comanda pe lanaga numarul de threaduri, numele
