@@ -1,0 +1,30 @@
+Florea Stefan - Razvan
+331CB
+Tema 3 Algoritmi Paraleli si Distribuiti
+
+Tema implementeaza un program pentru paradigma Map-Reduce folosita de motoarele
+de cautare in momentul in care sunt nevoite sa faca procesari pe multe fisiere
+mari. Programul este paralelizat, primind in linia de comanda numarul de
+threaduri ce vor urma sa proceseze pe fisierele citite.
+Programul primeste in linia de comanda pe lanaga numarul de threaduri, numele
+fisierului din va urma sa citeasca datele de care are nevoie si fisierul
+de output, inc are va scrie datele finale cu privire al cuvintele ce se doreau
+a fi gasite.
+Dupa ce se citesc datele din fiecare fisier, acestea sunt impartite intr-un
+numar fix de octeti, citit din fisierul de input, si apoi sunt adaugate in
+workpool, acesti octeti fiind depusi intr-un obiect de tipul "SequanceToCompute", 
+de unde threadurile vor scoate cate un job pe care il va procesa.
+Prima etapa, acceea de map, are rolul de intoarce cuvintele cu frecventa fiecaruia.
+Astfel se creeaza obiece de tipul "FrequanciesToUnify" ce vor contine aceste
+frecvente, si vor fi procesate astfel incat in final sa obtinem frecvente
+pentru fiecare cuvant la nivel de fisier. Pentru ultima etapa de reduce se
+vor creea obiecte de tipul "DocumentToVerify", iar workerii vor procesa aceste
+obiecte astfel incat sa afle care dintre acestea contin cuvintele cautate in
+primele "N"(numar citit initial din fisierul de input) cuvinte cu frecventa cea 
+mai mare. Rezultatele vor fi depuse in aceste clase, iar in final cand se revine 
+in main, se afiseaza primele "X" documente ce au respectat cerintele.
+Pentru ca un worker sa stie inc e mod trebuie sa proceseze un anumit job,
+am folosit supraincarcarea metodei "processSequance", cu diferiti parametrii
+in functie de etapa in care sunt. Am realizat acest lucru prin folosirea 
+interfetei "PartialSolution", interfata ce va fi mostenita de catre toate clasele
+ce vor reprezenta joburi. 
